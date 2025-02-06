@@ -1,4 +1,4 @@
-const alphabetContainer = document.getElementById("alphabetContainer");
+  const alphabetContainer = document.getElementById("alphabetContainer");
         const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 
         letters.forEach(letter => {
