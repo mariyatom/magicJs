@@ -1,30 +1,20 @@
-   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-        function createLetter() {
-            const letter = document.createElement("span");
-            letter.classList.add("letter");
-            letter.textContent = letters[Math.floor(Math.random() * letters.length)];
-            document.body.appendChild(letter);
+ function createCircle() {
+            const circle = document.createElement("div");
+            circle.classList.add("circle");
+            document.body.appendChild(circle);
             
+            const size = Math.random() * 300 + 100;
             const x = Math.random() * window.innerWidth;
             const y = Math.random() * window.innerHeight;
-            letter.style.left = `${x}px`;
-            letter.style.top = `${y}px`;
-
-            letter.addEventListener("click", () => animateLetter(letter));
+            
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.left = `${x}px`;
+            circle.style.top = `${y}px`;
             
             setTimeout(() => {
-                letter.remove();
+                circle.remove();
             }, 3000);
         }
 
-        function animateLetter(letter) {
-            const randomX = (Math.random() - 0.5) * 200;
-            const randomY = (Math.random() - 0.5) * 200;
-            letter.style.transform = `translate(${randomX}px, ${randomY}px) scale(1.5)`;
-            setTimeout(() => {
-                letter.style.transform = "scale(1)";
-            }, 500);
-        }
-
-        setInterval(createLetter, 500);
+        setInterval(createCircle, 700);
