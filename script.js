@@ -3,9 +3,9 @@
             circle.classList.add("circle");
             document.body.appendChild(circle);
             
-            const size = Math.random() * 300 + 100;
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
+            const size = Math.random() * 500 + 200;
+            const x = Math.random() * window.innerWidth - size / 2;
+            const y = Math.random() * window.innerHeight - size / 2;
             
             circle.style.width = `${size}px`;
             circle.style.height = `${size}px`;
