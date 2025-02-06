@@ -1,20 +1,22 @@
- function createCircle() {
-            const circle = document.createElement("div");
-            circle.classList.add("circle");
-            document.body.appendChild(circle);
+ const symbols = ['★', '☆', '☀', '☁', '☂', '☃', '✈', '❤', '♫', '⚡', '❄', '✔', '✖', '⚠', '❗'];
+        
+        function createSymbol() {
+            const symbol = document.createElement("span");
+            symbol.classList.add("symbol");
+            symbol.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+            document.body.appendChild(symbol);
             
-            const size = Math.random() * 500 + 200;
-            const x = Math.random() * window.innerWidth - size / 2;
-            const y = Math.random() * window.innerHeight - size / 2;
+            const size = Math.random() * 20 + 10;
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
             
-            circle.style.width = `${size}px`;
-            circle.style.height = `${size}px`;
-            circle.style.left = `${x}px`;
-            circle.style.top = `${y}px`;
+            symbol.style.fontSize = `${size}px`;
+            symbol.style.left = `${x}px`;
+            symbol.style.top = `${y}px`;
             
             setTimeout(() => {
-                circle.remove();
+                symbol.remove();
             }, 3000);
         }
 
-        setInterval(createCircle, 700);
+        setInterval(createSymbol, 200);
