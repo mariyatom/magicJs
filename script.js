@@ -52,7 +52,7 @@ const symbols = [
   '♥',
   '♦',
 ]
-const beepSound = new Audio('/beep.mp3')
+const beepSound = new Audio('./beep.mp3')
 function createSymbol() {
   const symbol = document.createElement('span')
   symbol.classList.add('symbol')
